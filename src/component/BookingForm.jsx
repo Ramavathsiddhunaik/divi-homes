@@ -19,16 +19,11 @@ function BookingForm({ isOpen, closeBooking, selectedService }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
- const handleSubmit = (e) => {
+const handleSubmit = (e) => {
     e.preventDefault();
     const message = `New Booking!%0AService: ${formData.service}%0AName: ${formData.name}%0AMobile: ${formData.mobile}%0ALocation: ${formData.location}`;
+    window.open(`https://wa.me/919177038969?text=${message}`, '_blank');
     setSubmitted(true);
-    setTimeout(() => {
-      window.open(`https://wa.me/917093040178?text=${message}`, '_blank');
-    }, 1000);
-    setTimeout(() => {
-      window.open(`https://wa.me/919177038969?text=${message}`, '_blank');
-    }, 2000);
   };
 
   const handleClose = () => {
