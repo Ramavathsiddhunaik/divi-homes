@@ -6,7 +6,7 @@ function OurServices(){
     { id: 4, name: "BHK CLEANING", image: "/Ourservices/Bhk.png" },
     { id: 5, name: "SPECIFIC CLEANING", image: "/Ourservices/Specific.png" },
     { id: 6, name: "DEEP CLEANING", image: "/Ourservices/Deep.png" },
-    { id: 7, name: "KITCHEN CLEANING", image: "/Ourservices/Kitchen.png" },
+    { id: 7, name: "KITCHEN CLEANING", image: "/Ourservices/kitchen.png" },
     { id: 8, name: "TOILET CLEANING", image: "/Ourservices/Toilet.png" },
     { id: 9, name: "TERRACE WATER TANKER", image: "/Ourservices/Watertank.png" },
 ]
