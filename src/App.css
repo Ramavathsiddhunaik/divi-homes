@@ -1155,14 +1155,14 @@ span{
   }
   .hero-left h1 span {
     color: #60a5fa;
-    font-size: 28px;
-    padding-left: 0;
-    display: inline;
+    font-size: 30px;
+    padding-left: 18vh;
+    
   }
   .hero-left p {
     margin-top: 2px;
-    padding-left: 2px;
-    font-size: 20px;
+    padding-left: 30px;
+    font-size: 18px;
     margin-left: 0;
   }
   #location {
