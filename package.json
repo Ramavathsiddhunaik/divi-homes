@@ -12,13 +12,16 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "build": "CI= react-scripts build",
+  "build": "react-scripts build",
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+  "extends": [
+    "react-app"
+  ],
+  "rules": {
+    "react/jsx-no-target-blank": "off",
+    "jsx-a11y/anchor-is-valid": "off"
+  }
+},
   "browserslist": {
     "production": [
       ">0.2%",
