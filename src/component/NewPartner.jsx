@@ -1,0 +1,111 @@
+import { useState } from 'react';
+
+function NewPartner({ isOpen, closePartner }) {
+  const [formData, setFormData] = useState({
+    name: '',
+    mobile: '',
+    location: ''
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
+  const handleClose = () => {
+    closePartner();
+    setSubmitted(false);
+    setFormData({ name: '', mobile: '', location: '' });
+  };
+
+  return (
+    <>
+      <div className={`booking-overlay ${isOpen ? 'overlay-show' : 'overlay-hide'}`} onClick={handleClose}></div>
+      <div className={`booking-modal ${isOpen ? 'open' : ''}`}>
+        <button className="booking-close" onClick={handleClose}>✕</button>
+
+        {submitted ? (
+          <div className="booking-success">
+            <div className="success-icon">🎉</div>
+            <h2>Request Submitted!</h2>
+            <p>Thank you for joining Divi Homes!</p>
+            <p>Our team will contact you shortly.</p>
+            <button onClick={handleClose}>Close</button>
+          </div>
+        ) : (
+          <div className="booking-layout">
+
+            <div className="booking-left">
+              <img src="/Servicecard/NewPartner.png" alt="Partner" className="booking-img partner-img" />
+            </div>
+
+            <div className="booking-right">
+              <h2>New Partner</h2>
+              <p>Join Divi Homes and grow your business!</p>
+
+              <div className="partner-price">
+                <span className="partner-mrp">₹2999</span>
+                <span className="partner-offer">₹499 🔥</span>
+                <span className="partner-tag">3 Months Subscription!</span>
+              </div>
+
+              <form className="booking-form" onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  autoComplete="off"
+                  required
+                />
+                <input
+                  type="tel"
+                  name="mobile"
+                  placeholder="Mobile Number (10 digits)"
+                  value={formData.mobile}
+                  onChange={handleChange}
+                  maxLength={10}
+                  autoComplete="off"
+                  required
+                />
+                <input
+                  list="locations-list"
+                  name="location"
+                  placeholder="Select or Type Location"
+                  value={formData.location}
+                  onChange={handleChange}
+                  autoComplete="off"
+                  required
+                />
+                <datalist id="locations-list">
+                  <option value="LB Nagar" />
+                  <option value="Malakpet" />
+                  <option value="Dilsukhnagar" />
+                  <option value="Nagole" />
+                  <option value="Uppal" />
+                  <option value="Amberpet" />
+                  <option value="Hayathnagar" />
+                  <option value="Pedda Amberpet" />
+                  <option value="Kuntloor" />
+                  <option value="Boduppal" />
+                  <option value="Ameerpet" />
+                  <option value="MGBS" />
+                </datalist>
+                <button type="submit">Join Now 🚀</button>
+              </form>
+            </div>
+
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
+
+export default NewPartner;
