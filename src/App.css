@@ -1154,9 +1154,10 @@ span{
     padding-left: 35px;
   }
   .hero-left h1 span {
-    padding-left: 25vh;
-    font-size: 25px;
-    display: block;
+    color: #60a5fa;
+    font-size: 28px;
+    padding-left: 0;
+    display: inline;
   }
   .hero-left p {
     margin-top: 2px;
