@@ -8,7 +8,7 @@ function StickyButtons({ openBooking }) {
   <img src="/Servicecard/whatsappemoji.png" alt="WhatsApp" />
 </a>
       <div className="sticky-btn" onClick={() => openBooking()}>
-        <img src="/Servicecard/Bookbtn.png" alt="Cart" />
+        <img src="/Servicecard/bookbtn.png" alt="Cart" />
       </div>
     </div>
   );
