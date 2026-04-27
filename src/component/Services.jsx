@@ -13,7 +13,7 @@ function OurServices(){
 const doubled = [...services, ...services]
     return(
         <section className="services-section">
-            <h1 className="heading">Our Services - <div><span>Help in Minutes</span></div> </h1>
+            <h1 className="heading">OUR SERVICES - <span>Help in Minutes</span></h1>
         <div services-wrapper>
           <div className="services-track">
              {doubled.map( (services, index) => (
