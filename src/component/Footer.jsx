@@ -48,9 +48,9 @@ function Footer() {
       <div className="footer-bottom">
         <p>© 2015 Divi Homes. All Rights Reserved.</p>
         <div className="footer-social">
-          <a href="https://wa.me/917093040178" target="_blank">WhatsApp</a>
-          <a href="https://www.facebook.com" target="_blank">Facebook</a>
-          <a href="https://www.instagram.com" target="_blank">Instagram</a>
+         <a href="https://wa.me/917093040178" target="_blank" rel="noreferrer">WhatsApp</a>
+<a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+<a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a>
         </div>
       </div>
     </footer>
