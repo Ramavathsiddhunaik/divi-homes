@@ -1,7 +1,7 @@
 function OurServices(){
-     let services = [
-    { id: 1, name: "FLOOR CLEANING", image: "/Ourservices/deep.png" },
-    { id: 2, name: "GARDEN CLEANING", image: "/Ourservices/floor.png" },
+   let services = [
+    { id: 1, name: "FLOOR CLEANING", image: "/Ourservices/floor.png" },
+    { id: 2, name: "GARDEN CLEANING", image: "/Ourservices/deep.png" },
     { id: 3, name: "GLASS CLEANING", image: "/Ourservices/glass.png" },
     { id: 4, name: "BHK CLEANING", image: "/Ourservices/group.png" },
     { id: 5, name: "SPECIFIC CLEANING", image: "/Ourservices/roomclean.png" },
