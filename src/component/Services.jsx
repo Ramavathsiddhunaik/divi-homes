@@ -3,7 +3,7 @@ function OurServices(){
     { id: 1, name: "FLOOR CLEANING", image: "/Ourservices/Floor.png" },
     { id: 2, name: "GARDEN CLEANING", image: "/Ourservices/Garden.png" },
     { id: 3, name: "GLASS CLEANING", image: "/Ourservices/Glass.png" },
-    { id: 4, name: "BHK CLEANING", image: "/Ourservices/Bhk.png" },
+    { id: 4, name: "Bedroom CLEANING", image: "/Ourservices/bedroom.png" },
     { id: 5, name: "SPECIFIC CLEANING", image: "/Ourservices/Specific.png" },
     { id: 6, name: "DEEP CLEANING", image: "/Ourservices/deep.png" },
     { id: 7, name: "KITCHEN CLEANING", image: "/Ourservices/kitchen.png" },
