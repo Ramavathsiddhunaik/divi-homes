@@ -8,7 +8,7 @@ function OurServices(){
     { id: 6, name: "DEEP CLEANING", image: "/Ourservices/deep.png" },
     { id: 7, name: "KITCHEN CLEANING", image: "/Ourservices/kitchen.png" },
     { id: 8, name: "TOILET CLEANING", image: "/Ourservices/Toilet.png" },
-    { id: 9, name: "TERRACE WATER TANKER", image: "/Ourservices/Watertank.png" },
+    { id: 9, name: "TERRACE WATER TANKER", image: "/Ourservices/tank.png" },
 ]
 const doubled = [...services, ...services]
     return(
