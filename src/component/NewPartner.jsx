@@ -20,16 +20,14 @@ function NewPartner({ isOpen, closePartner }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Send background email
     emailjs.send(SERVICE_ID, TEMPLATE_ID, {
       name: formData.name,
       phone: formData.mobile,
       service: 'New Partner Request',
       message: `Location: ${formData.location}`,
-      reply_to: 'Capitalhomecleaning.hyd@gmail.com',
+      reply_to: 'asianelitecleaning.hyd@gmail.com',
     }, PUBLIC_KEY);
 
-    // Send WhatsApp
     const message = `New Partner Request!%0AName: ${formData.name}%0AMobile: ${formData.mobile}%0ALocation: ${formData.location}`;
     window.open(`https://wa.me/917093040178?text=${message}`, '_blank');
     setSubmitted(true);
@@ -51,7 +49,7 @@ function NewPartner({ isOpen, closePartner }) {
           <div className="booking-success">
             <div className="success-icon">🎉</div>
             <h2>Request Submitted!</h2>
-            <p>Thank you for joining Capital Home Cleaning Services!</p>
+            <p>Thank you for joining Asian Elite Home Cleaning Service!</p>
             <p>Our team will contact you shortly.</p>
             <button onClick={handleClose}>Close</button>
           </div>
@@ -62,7 +60,7 @@ function NewPartner({ isOpen, closePartner }) {
             </div>
             <div className="booking-right">
               <h2>New Partner</h2>
-              <p>Join Capital Home Cleaning Services and grow your business!</p>
+              <p>Join Asian Elite Home Cleaning Service and grow your business!</p>
               <div className="partner-price">
                 <span className="partner-mrp">₹2999</span>
                 <span className="partner-offer">₹499 🔥</span>

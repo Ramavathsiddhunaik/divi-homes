@@ -27,16 +27,14 @@ function BookingForm({ isOpen, closeBooking, selectedService }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Send background email
     emailjs.send(SERVICE_ID, TEMPLATE_ID, {
       name: formData.name,
       phone: formData.mobile,
       service: formData.service,
       message: `Location: ${formData.location}`,
-      reply_to: 'Capitalhomecleaning.hyd@gmail.com',
+      reply_to: 'asianelitecleaning.hyd@gmail.com',
     }, PUBLIC_KEY);
 
-    // Send WhatsApp
     const message = `New Booking!%0AService: ${formData.service}%0AName: ${formData.name}%0AMobile: ${formData.mobile}%0ALocation: ${formData.location}`;
     window.open(`https://wa.me/919177038969?text=${message}`, '_blank');
     setSubmitted(true);
@@ -58,7 +56,7 @@ function BookingForm({ isOpen, closeBooking, selectedService }) {
           <div className="booking-success">
             <div className="success-icon">🎉</div>
             <h2>Booking Submitted!</h2>
-            <p>Thank you for choosing Capital Home Cleaning Services!</p>
+            <p>Thank you for choosing Asian Elite Home Cleaning Service!</p>
             <p>Our team will contact you shortly.</p>
             <button onClick={handleClose}>Close</button>
           </div>

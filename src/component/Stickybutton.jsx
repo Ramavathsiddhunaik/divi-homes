@@ -7,7 +7,7 @@ const PUBLIC_KEY = 'OrZQg6SqfkGvqPjex';
 
 function StickyButtons({ openBooking }) {
   const [showCallPopup, setShowCallPopup] = useState(false);
-  const whatsappMessage = `Hello Capital Home Cleaning Services!%0AI need a cleaning service.%0APlease contact me.`;
+  const whatsappMessage = `Hello Asian Elite Home Cleaning Service!%0AI need a cleaning service.%0APlease contact me.`;
 
   const handleCall = () => {
     emailjs.send(SERVICE_ID, TEMPLATE_ID, {
@@ -15,7 +15,7 @@ function StickyButtons({ openBooking }) {
       phone: 'Unknown',
       service: 'Called Uncle 2 - +91 9177038969',
       message: 'A customer clicked the Call button on the website.',
-      reply_to: 'Capitalhomecleaning.hyd@gmail.com',
+      reply_to: 'asianelitecleaning.hyd@gmail.com',
     }, PUBLIC_KEY);
 
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -32,7 +32,7 @@ function StickyButtons({ openBooking }) {
       phone: 'Unknown',
       service: 'WhatsApped Uncle 1 - +91 7093040178',
       message: 'A customer clicked the WhatsApp button on the website.',
-      reply_to: 'Capitalhomecleaning.hyd@gmail.com',
+      reply_to: 'asianelitecleaning.hyd@gmail.com',
     }, PUBLIC_KEY);
     window.open(`https://wa.me/917093040178?text=${whatsappMessage}`, '_blank');
   };
@@ -56,7 +56,6 @@ function StickyButtons({ openBooking }) {
         </div>
       </div>
 
-      {/* Call Popup */}
       {showCallPopup && (
         <div className="call-popup-overlay" onClick={() => setShowCallPopup(false)}>
           <div className="call-popup" onClick={(e) => e.stopPropagation()}>
