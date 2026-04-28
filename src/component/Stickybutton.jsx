@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
-const SERVICE_ID = 'service_85hucmy';
-const TEMPLATE_ID = 'template_95ui84n';
-const PUBLIC_KEY = 'OrZQg6SqfkGvqPjex';
+const SERVICE_ID = 'service_fgns0fg';
+const TEMPLATE_ID = 'template_01bazyl';
+const PUBLIC_KEY = 'JklixTopIUPICWgQN';
 
 function StickyButtons({ openBooking }) {
   const [showCallPopup, setShowCallPopup] = useState(false);
