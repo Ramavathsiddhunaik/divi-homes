@@ -8,6 +8,7 @@ import Reviews from './component/Reviews';
 import Verified from './component/Verified';
 import Servicecard from './component/Servicecards';
 import AboutUs from './component/Aboutus';
+import GoogleMap from './component/GoogleMap';
 import StrickyButtons from './component/Stickybutton';
 import Footer from './component/Footer';
 import BookingForm from './component/BookingForm';
@@ -43,6 +44,7 @@ function App() {
       <Verified />
       <Servicecard openBooking={openBooking} />
       <AboutUs />
+      <GoogleMap />
       <Footer />
       <BookingForm
         isOpen={isBookingOpen}
