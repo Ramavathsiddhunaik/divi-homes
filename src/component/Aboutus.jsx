@@ -7,9 +7,9 @@ function AboutUs() {
         <p className="aboutus-meet">Meet</p>
         <h3 className="aboutus-name">Pavan Kumar</h3>
         <p className="aboutus-description">
-          As the Founder of Divi Homes. I bring deep expertise in professional 
+          As the Founder of AsianElite Home Care. I bring deep expertise in professional 
           home care — built through years of hands-on experience and an obsession 
-          with perfection. At Divi Homes, we don't just clean — we restore, refresh, 
+          with perfection. At AsianElite Home Care, we don't just clean — we restore, refresh, 
           and elevate every space we touch. From luxury villas to modern apartments, 
           our elite team of trained professionals delivers a standard of cleanliness 
           that speaks for itself. Because your home deserves nothing less than the best.

@@ -1,8 +1,9 @@
-
+import SEO from './SEO';
 
 function Hero({ openBooking}) {
     return (
         <section className="hero-section" id="home">
+            <SEO />
             <video autoPlay muted loop className="hero-video">
                 <source src="/Glasse.mp4" type="video/mp4" />
             </video>

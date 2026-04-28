@@ -3,18 +3,22 @@ function Footer() {
     <footer className="footer-section">
       <h2 className="footer-heading">"Defined by detail. Delivered with care."</h2>
       
-      <div className="footer-email-box">
-        <p>Feel free to reach us at:</p>
-        <div className="footer-email">
-          ✉️ divihomes@gmail.com
-        </div>
-      </div>
+     <div className="footer-email-box">
+  <p>Feel free to reach us at:</p>
+
+  <a 
+    href="mailto:Asianelitehomecleaning.hyd@gmail.com"
+    className="footer-email"
+  >
+    Asianelitehomecleaning.hyd@gmail.com
+  </a>
+</div>
 
       <div className="footer-container">
         <div className="footer-left">
-          <h3>Divi Homes</h3>
-          <p>📞 +91 99999 99999</p>
-          <p>💬 +91 99999 99999</p>
+          <h3>AsianElite Service</h3>
+          <p>📞 +91 9177038969</p>
+          <p>💬 +91 7093040178</p>
         </div>
 
         <div className="footer-middle">
@@ -46,7 +50,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2015 Divi Homes. All Rights Reserved.</p>
+        <p>© 2015 AsianElite Service. All Rights Reserved.</p>
         <div className="footer-social">
          <a href="https://wa.me/917093040178" target="_blank" rel="noreferrer">WhatsApp</a>
 <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>

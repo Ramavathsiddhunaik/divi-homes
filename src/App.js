@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './component/Navbar';
 import Hero from './component/Hero';
 import OurServices from './component/Services';
@@ -32,7 +33,7 @@ function App() {
   const closePartner = () => setIsPartnerOpen(false);
 
   return (
-    <>
+    <HelmetProvider>
       <Navbar openBooking={openBooking} openPartner={openPartner} />
       <StrickyButtons openBooking={openBooking} />
       <Hero openBooking={openBooking} />
@@ -52,7 +53,7 @@ function App() {
         isOpen={isPartnerOpen}
         closePartner={closePartner}
       />
-    </>
+    </HelmetProvider>
   );
 }
 

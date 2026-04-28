@@ -1,7 +1,7 @@
 function Promise(){
     return(
         <section className="promise-section">
-        <h2 className="head">Divi Homes Promise 💯</h2>
+        <h2 className="head">AsianElite Service Promise 💯</h2>
         <div className="promise-track">
             <div className="promise-card">
                 <span>💰</span>
