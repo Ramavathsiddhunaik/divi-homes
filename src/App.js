@@ -13,6 +13,7 @@ import StrickyButtons from './component/Stickybutton';
 import Footer from './component/Footer';
 import BookingForm from './component/BookingForm';
 import NewPartner from './component/NewPartner';
+import AdminPanel from './component/AdminPanel';
 import './App.css';
 
 function App() {
@@ -32,6 +33,10 @@ function App() {
 
   const openPartner = () => setIsPartnerOpen(true);
   const closePartner = () => setIsPartnerOpen(false);
+
+  if (window.location.pathname === '/admin') {
+    return <HelmetProvider><AdminPanel /></HelmetProvider>;
+}
 
   return (
     <HelmetProvider>

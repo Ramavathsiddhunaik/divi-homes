@@ -37,6 +37,20 @@ function BookingForm({ isOpen, closeBooking, selectedService }) {
 
     const message = `New Booking!%0AService: ${formData.service}%0AName: ${formData.name}%0AMobile: ${formData.mobile}%0ALocation: ${formData.location}`;
     window.open(`https://wa.me/919177038969?text=${message}`, '_blank');
+    
+    const booking = {
+    id: Date.now(),
+    name: formData.name,
+    mobile: formData.mobile,
+    service: formData.service,
+    location: formData.location,
+    status: 'Pending',
+    date: new Date().toLocaleDateString()
+};
+const existing = JSON.parse(localStorage.getItem('asianelite_bookings') || '[]');
+existing.push(booking);
+localStorage.setItem('asianelite_bookings', JSON.stringify(existing));
+
     setSubmitted(true);
   };
 
