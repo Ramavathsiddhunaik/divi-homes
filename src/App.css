@@ -45,10 +45,25 @@ html, body {
 
 
 .logo {
-    font-size: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.logo-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #2563eb;
+}
+
+.logo-text {
+    font-size: 32px;
     font-weight: 700;
     color: #2563eb;
-    padding-left: 20px;
 }
 
 .nav-profile {
@@ -1143,6 +1158,21 @@ span{
     border-bottom: 1px solid #f0f0f0;
     cursor: pointer;
   }
+
+  .mobile-nav-logo {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #2563eb;
+}
+
+.mobile-logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+}
 
   /* Hero */
   .hero-section {

@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 
 function Navbar({ openBooking, openPartner }) {
@@ -7,20 +6,20 @@ function Navbar({ openBooking, openPartner }) {
     const menuRef = useRef(null);
 
     const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-        const navbarHeight = document.querySelector('.navbar').offsetHeight;
-        const top = section.getBoundingClientRect().top + window.scrollY - navbarHeight - 20;
-        window.scrollTo({ top: top, behavior: 'smooth' });
-    }
-    setIsProfileOpen(false);
-    setIsMenuOpen(false);
-};
+        const section = document.getElementById(id);
+        if (section) {
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const top = section.getBoundingClientRect().top + window.scrollY - navbarHeight - 20;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+        setIsProfileOpen(false);
+        setIsMenuOpen(false);
+    };
 
     const handleShare = () => {
         if (navigator.share) {
             navigator.share({
-                title: 'Divi Homes',
+                title: 'AsianElite Home Cleaning Service',
                 text: 'Professional Home Cleaning Services in Hyderabad!',
                 url: window.location.href,
             });
@@ -45,7 +44,10 @@ function Navbar({ openBooking, openPartner }) {
         <nav className="navbar" ref={menuRef}>
 
             {/* Desktop */}
-            <div className="logo" onClick={() => scrollToSection('home')} style={{cursor:'pointer'}}>Divi Homes</div>
+            <div className="logo" onClick={() => scrollToSection('home')}>
+                <img src="/Logo.png" alt="AsianElite Logo" className="logo-img" />
+                <span className="logo-text">AsianElite Service</span>
+            </div>
             <ul className="nav-links">
                 <li onClick={() => scrollToSection('services')}>Services</li>
                 <li onClick={() => openBooking()}>My Bookings</li>
@@ -64,25 +66,28 @@ function Navbar({ openBooking, openPartner }) {
             </div>
 
             {/* Mobile */}
-            <div className="mobile-navbar">
-                <div className="mobile-logo" onClick={() => scrollToSection('home')} style={{cursor:'pointer'}}>Divi Homes</div>
-                <div className="mobile-bottom-bar">
-                    <span onClick={() => scrollToSection('services')}>Services</span>
-                    <span onClick={() => openBooking()}>My Bookings</span>
-                    <span onClick={() => openPartner()}>New Partner</span>
-                    <span onClick={() => scrollToSection('about')}>About Us</span>
-                    <span className="menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>≡</span>
-                </div>
+            {/* Mobile */}
+<div className="mobile-navbar">
+    <div className="mobile-logo" onClick={() => scrollToSection('home')} style={{cursor:'pointer'}}>AsianElite Service</div>
+    <div className="mobile-bottom-bar">
+        <span onClick={() => scrollToSection('services')}>Services</span>
+        <span onClick={() => openBooking()}>My Bookings</span>
+        <span onClick={() => scrollToSection('home')} className="mobile-logo-icon">
+            <img src="/Logo.png" alt="logo" className="mobile-nav-logo" />
+        </span>
+        <span onClick={() => openPartner()}>New Partner</span>
+        <span onClick={() => scrollToSection('about')}>About Us</span>
+        <span className="menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>≡</span>
+    </div>
 
-                {/* Smooth dropdown */}
-                <div className={`mobile-dropdown ${isMenuOpen ? 'dropdown-open' : ''}`}>
-                    <div onClick={() => scrollToSection('home')}>🏠 Home</div>
-                    <div onClick={() => scrollToSection('about')}>ℹ️ About Us</div>
-                    <div onClick={handleShare}>📤 Share</div>
-                    <div onClick={() => { openBooking(); setIsMenuOpen(false); }}>📋 My Bookings</div>
-                    <div onClick={() => { openPartner(); setIsMenuOpen(false); }}>🤝 New Partner</div>
-                </div>
-            </div>
+    <div className={`mobile-dropdown ${isMenuOpen ? 'dropdown-open' : ''}`}>
+        <div onClick={() => scrollToSection('home')}>🏠 Home</div>
+        <div onClick={() => scrollToSection('about')}>ℹ️ About Us</div>
+        <div onClick={handleShare}>📤 Share</div>
+        <div onClick={() => { openBooking(); setIsMenuOpen(false); }}>📋 My Bookings</div>
+        <div onClick={() => { openPartner(); setIsMenuOpen(false); }}>🤝 New Partner</div>
+    </div>
+</div>
 
         </nav>
     );
